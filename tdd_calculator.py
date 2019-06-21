@@ -1,21 +1,17 @@
-#import tdd_calculator
 import re
-#from tdd_calculator import add, multiply
+
+def add(first_number=0, second_number=0):
+    return first_number + second_number
+    
+
+class calculator():
+    def add(*numbers):
+        total = 0 
+        for number in numbers: 
+            total += number 
+        return total
 
 
+    def multiply(first_number, second_number):
+        return first_number * second_number
 
-
-
-class Calculator(object):
-
-  def add(self, x, y):
-    number_types = (int, float,  complex )
-    if isinstance(x, number_types) and isinstance(y, number_types):
-      return x - y
-    else:
-      raise ValueError
-
-
-    def multiply(self):
-        """Multiply parameters."""
-        return self.num_x * self.num_y

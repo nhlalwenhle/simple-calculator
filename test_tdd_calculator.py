@@ -1,34 +1,39 @@
 import pytest
-#import tdd_calculator
+import tdd_calculator
 from tdd_calculator import*
 
-#write a test to demonstrate that add(0,0) will return 0.
-def test_add_two_zeros():
-    result = add(0,0)
-    assert result == 0
 
-def test_add_negatives():
-    result = add(-1,-1)
-    assert result == -2
+def test_add_two_single_numbers():
+    assert calculator.add(2, 2) == 4
 
-def test_add_positive_numbers():
-    result = add(4,5)
-    assert result == 9
+def test_add_mixed_numbers():
+    assert calculator.add(50, 17) == 67
 
-def test_add_many_numbers():
-    result = add(1,2,3,4)
-    assert result == 10
+def test_adding_zeros_together():
+    assert calculator.add(0, 0) == 0
 
-def test_multiplication_of_two_numbers():
-    result = multiply(1,2)
-    assert result == 2
+def test_adding_three_numbers():
+    assert calculator.add(1, 3, 5) == 9
 
-def test_multiplication_of_multiple_numbers():
-    result = multiply(1,2,3,4)
-    assert result == 24
+    assert calculator.add(10, 30, 50) == 90
 
-    result = multiply(1,3,5,7,9)
-    assert result == 945
+def test_with_5_arguments():
+    assert calculator.add(1, 2, 3, 4, 5) == 15
 
-    result = multiply(1,1,3,3,4,4)
-    assert result == 144
+
+
+def test_multiply_single_numbers():
+    assert calculator.multiply (3, 2) == 6
+
+def test_multiplying_double_digit_numbers():
+	assert calculator.multiply (10, 20) == 200
+
+def test_multiply_large_numbers():
+	assert calculator.multiply (2000, 1000) == 2000000
+
+def test_multiplication_with_zero():
+	assert calculator.multiply (5,0) == 0
+
+	assert calculator.multiply (10, 0) == 0
+
+
