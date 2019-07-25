@@ -1,17 +1,15 @@
 import re
 
-def add(first_number=0, second_number=0):
-    return first_number + second_number
-    
+def add(value1, value2):
+    return value1 + value2
 
-class calculator():
-    def add(*numbers):
-        total = 0 
-        for number in numbers: 
-            total += number 
-        return total
+def multiply(value1, value2):
+    return value1 * value2
 
+def subtract(value1, value2):
+    return value1 - value2
 
-    def multiply(first_number, second_number):
-        return first_number * second_number
+def divide(value1, value2):
+    return value1 / value2
+
 
